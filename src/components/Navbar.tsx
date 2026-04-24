@@ -62,11 +62,22 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Botão Currículo premium */}
-        <div className="hidden md:block">
-          <Button variant="outline" className="resume-btn">
-            Currículo
-          </Button>
+        {/* Ícone premium centralizado e harmônico na Navbar */}
+        <div className="hidden md:flex items-center ml-6">
+          <span
+            className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-zinc-900/80 border border-cyan-700/40 shadow-md hover:scale-105 transition-transform duration-200 cursor-pointer"
+            style={{ boxShadow: '0 0 16px #06b6d4aa' }}
+            tabIndex={0}
+            aria-label="Currículo"
+          >
+            <img
+              src="/favicon.ico.png"
+              alt="Currículo"
+              className="w-10 h-10 object-contain"
+              draggable={false}
+              style={{ filter: 'drop-shadow(0 0 6px #06b6d4cc)' }}
+            />
+          </span>
         </div>
 
         {/* Botão menu mobile */}
