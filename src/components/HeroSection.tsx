@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-32 lg:pt-40 pb-8 section overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-24 lg:pt-32 pb-8 section overflow-hidden"
     >
       {/* Grid tecnológico de fundo */}
       <div
