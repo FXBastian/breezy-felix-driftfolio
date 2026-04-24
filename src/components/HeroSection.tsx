@@ -87,7 +87,7 @@ const HeroSection = () => {
         </div>
 
         {/* Avatar com ring animado, glow e badges flutuantes */}
-        <div className="order-1 lg:order-2 flex justify-center">
+        <div className="order-1 lg:order-2 flex justify-center mt-12">
           <div className="relative w-64 h-64 md:w-80 md:h-80 animate-fade-in-up [animation-delay:0.6s]">
             {/* Ring animado externo */}
             <div className="absolute -inset-4 md:-inset-6 flex items-center justify-center z-10 pointer-events-none">
