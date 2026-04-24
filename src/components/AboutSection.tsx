@@ -84,7 +84,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-radial from-cyan-700/40 to-transparent rounded-2xl blur-2xl z-0" />
               {/* Imagem principal */}
               <img
-                src="/placeholder.svg"
+                src="/profile-about.jpg"
                 alt="Félix trabalhando"
                 className="w-full h-full object-cover rounded-2xl border-4 border-zinc-700 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/30"
                 style={{willChange: 'transform'}}
