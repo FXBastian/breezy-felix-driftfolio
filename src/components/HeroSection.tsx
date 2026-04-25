@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-24 lg:pt-32 pb-8 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-24 lg:pt-32 pb-8 overflow-hidden w-full max-w-full"
     >
       {/* Grid tecnológico de fundo */}
       <div
@@ -60,9 +60,9 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full max-w-full px-2 sm:px-4">
         {/* Texto principal com animações de entrada */}
-        <div className="order-2 lg:order-1 pl-2 md:pl-8 lg:pl-16 xl:pl-24">
+        <div className="order-2 lg:order-1 pl-2 md:pl-8 lg:pl-16 xl:pl-24 w-full max-w-full">
           <p className="text-primary font-bold mb-3 uppercase tracking-wider animate-fade-in-up [animation-delay:0.1s]">Olá, eu sou</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground animate-fade-in-up [animation-delay:0.2s]">
             Félix Bastian
@@ -90,8 +90,8 @@ const HeroSection = () => {
         </div>
 
         {/* Avatar com ring animado, glow e badges flutuantes */}
-        <div className="order-1 lg:order-2 flex justify-center mt-12">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 animate-fade-in-up [animation-delay:0.6s]">
+        <div className="order-1 lg:order-2 flex justify-center mt-12 w-full max-w-full">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 animate-fade-in-up [animation-delay:0.6s] max-w-full">
             {/* Ring animado externo */}
             <div className="absolute -inset-4 md:-inset-6 flex items-center justify-center z-10 pointer-events-none">
               <div className="w-full h-full rounded-full border-2 border-cyan-700/40 animate-spin-slow" style={{boxShadow: '0 0 32px 8px #0ea5e9, 0 0 0 8px #0ea5e91a'}} />

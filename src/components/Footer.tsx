@@ -6,7 +6,7 @@ const Footer = () => {
   
   return (
     <footer className="bg-secondary/50 py-12">
-      <div className="container-fluid">
+      <div className="container-fluid w-full max-w-full px-2 sm:px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-2xl font-bold text-gradient">

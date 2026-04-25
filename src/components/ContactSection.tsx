@@ -14,7 +14,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section w-full max-w-full">
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold text-gradient mb-4">Entre em Contato</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -22,8 +22,8 @@ const ContactSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <Card className="p-6 bg-secondary/30 animate-drift">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-full px-2 sm:px-4">
+        <Card className="p-6 bg-secondary/30 animate-drift w-full max-w-full">
           <h3 className="text-xl font-semibold mb-6">Informações de Contato</h3>
           
           <div className="space-y-6">
@@ -106,7 +106,7 @@ const ContactSection = () => {
           </div>
         </Card>
         
-        <div className="animate-float">
+        <div className="animate-float w-full max-w-full">
           {/* Formulário sem backend: envia via mailto */}
           <form
             action="mailto:fxbastian88@gmail.com"

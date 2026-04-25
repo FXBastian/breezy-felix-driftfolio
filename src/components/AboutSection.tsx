@@ -37,7 +37,7 @@ const cardData = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative bg-secondary/50 py-24 overflow-hidden">
+    <section id="about" className="relative bg-secondary/50 py-24 overflow-hidden w-full max-w-full">
       {/* Background decorativo: glow, linhas, grid e pontos */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         {/* Glow radial */}
@@ -60,7 +60,7 @@ const AboutSection = () => {
         ))}
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 w-full max-w-full px-2 sm:px-4">
         {/* Título e subtítulo com animação de entrada */}
         <div className="mb-12 text-center animate-fade-in-up [animation-delay:0.1s]">
           <h2 className="text-3xl font-bold text-gradient mb-4">Sobre Mim</h2>
@@ -72,12 +72,12 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-full">
           {/* Bloco da imagem com moldura, glow, badges e animação */}
-          <div className="flex justify-center animate-fade-in-up [animation-delay:0.2s] relative">
-            <div className="flex items-center justify-center">
+          <div className="flex justify-center animate-fade-in-up [animation-delay:0.2s] relative w-full max-w-full">
+            <div className="flex items-center justify-center w-full max-w-full">
               {/* Wrapper fixo para moldura giratória */}
-              <div className="relative flex items-center justify-center" style={{ width: 352, height: 432 }}>
+              <div className="relative flex items-center justify-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" style={{ width: '100%', maxWidth: 352, height: 432 }}>
                 {/* Moldura giratória estável */}
                 <div
                   className="absolute inset-0 rounded-2xl border-2 border-cyan-700/40 animate-spin-slow"
@@ -117,7 +117,7 @@ const AboutSection = () => {
           </div>
 
           {/* Conteúdo textual com destaque e animação */}
-          <div className="animate-fade-in-up [animation-delay:0.3s] pr-2 md:pr-8 lg:pr-16 xl:pr-24">
+          <div className="animate-fade-in-up [animation-delay:0.3s] pr-2 md:pr-8 lg:pr-16 xl:pr-24 w-full max-w-full">
             <div className="mb-6">
               <p className="text-lg font-semibold text-cyan-200 mb-3 leading-relaxed">
                 Olá! Sou <span className="text-primary font-bold">Félix Bastian</span>, desenvolvedor front-end apaixonado por criar interfaces que combinam estética e funcionalidade.
