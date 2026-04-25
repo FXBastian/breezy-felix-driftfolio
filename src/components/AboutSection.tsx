@@ -60,7 +60,7 @@ const AboutSection = () => {
         ))}
       </div>
 
-      <div className="section relative z-10">
+      <div className="relative z-10">
         {/* Título e subtítulo com animação de entrada */}
         <div className="mb-12 text-center animate-fade-in-up [animation-delay:0.1s]">
           <h2 className="text-3xl font-bold text-gradient mb-4">Sobre Mim</h2>
@@ -75,42 +75,49 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Bloco da imagem com moldura, glow, badges e animação */}
           <div className="flex justify-center animate-fade-in-up [animation-delay:0.2s] relative">
-            <div className="relative w-64 h-80 md:w-80 md:h-96 flex items-center justify-center">
-              {/* Moldura visual premium */}
-              <div className="absolute -inset-4 flex items-center justify-center z-10 pointer-events-none">
-                <div className="w-full h-full rounded-2xl border-2 border-cyan-700/40 animate-spin-slow" style={{boxShadow: '0 0 32px 8px #0ea5e9, 0 0 0 8px #0ea5e91a'}} />
-              </div>
-              {/* Glow atrás da imagem */}
-              <div className="absolute inset-0 bg-gradient-radial from-cyan-700/40 to-transparent rounded-2xl blur-2xl z-0" />
-              {/* Imagem principal */}
-              <img
-                src="/profile-about.jpg"
-                alt="Félix trabalhando"
-                className="w-full h-full object-cover rounded-2xl border-4 border-zinc-700 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/30"
-                style={{willChange: 'transform'}}
-              />
-              {/* Badges flutuantes decorativos */}
-              {badges.map((badge, i) => (
-                <span
-                  key={badge.label}
-                  className={`absolute flex items-center px-2 py-1 rounded-full text-xs font-semibold shadow-md ${badge.color} text-white/90 animate-badge-float${i+1}`}
+            <div className="flex items-center justify-center">
+              {/* Wrapper fixo para moldura giratória */}
+              <div className="relative flex items-center justify-center" style={{ width: 352, height: 432 }}>
+                {/* Moldura giratória estável */}
+                <div
+                  className="absolute inset-0 rounded-2xl border-2 border-cyan-700/40 animate-spin-slow"
                   style={{
-                    top: badge.top,
-                    left: badge.left,
-                    zIndex: 30,
-                    filter: 'drop-shadow(0 2px 8px #0008)',
-                    opacity: 0.92,
-                    pointerEvents: 'none',
+                    boxShadow: '0 0 32px 8px #0ea5e9, 0 0 0 8px #0ea5e91a',
+                    willChange: 'transform',
                   }}
-                >
-                  {badge.label}
-                </span>
-              ))}
+                />
+                {/* Glow atrás da imagem */}
+                <div className="absolute left-4 top-4 right-4 bottom-4 bg-gradient-radial from-cyan-700/40 to-transparent rounded-2xl blur-2xl z-0" />
+                {/* Imagem principal */}
+                <img
+                  src="/profile-about.jpg"
+                  alt="Félix trabalhando"
+                  className="relative w-64 h-80 md:w-80 md:h-96 object-cover rounded-2xl border-4 border-zinc-700 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/30 z-10"
+                  style={{ willChange: 'transform' }}
+                />
+                {/* Badges flutuantes decorativos */}
+                {badges.map((badge, i) => (
+                  <span
+                    key={badge.label}
+                    className={`absolute flex items-center px-2 py-1 rounded-full text-xs font-semibold shadow-md ${badge.color} text-white/90 animate-badge-float${i+1}`}
+                    style={{
+                      top: badge.top,
+                      left: badge.left,
+                      zIndex: 30,
+                      filter: 'drop-shadow(0 2px 8px #0008)',
+                      opacity: 0.92,
+                      pointerEvents: 'none',
+                    }}
+                  >
+                    {badge.label}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Conteúdo textual com destaque e animação */}
-          <div className="animate-fade-in-up [animation-delay:0.3s]">
+          <div className="animate-fade-in-up [animation-delay:0.3s] pr-2 md:pr-8 lg:pr-16 xl:pr-24">
             <div className="mb-6">
               <p className="text-lg font-semibold text-cyan-200 mb-3 leading-relaxed">
                 Olá! Sou <span className="text-primary font-bold">Félix Bastian</span>, desenvolvedor front-end apaixonado por criar interfaces que combinam estética e funcionalidade.

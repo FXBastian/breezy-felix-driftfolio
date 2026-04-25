@@ -1,5 +1,6 @@
 
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -20,10 +21,12 @@ const techBadges = [
 ];
 
 const HeroSection = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-24 lg:pt-32 pb-8 section overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-24 lg:pt-32 pb-8 overflow-hidden"
     >
       {/* Grid tecnológico de fundo */}
       <div
@@ -59,7 +62,7 @@ const HeroSection = () => {
 
       <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Texto principal com animações de entrada */}
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 pl-2 md:pl-8 lg:pl-16 xl:pl-24">
           <p className="text-primary font-bold mb-3 uppercase tracking-wider animate-fade-in-up [animation-delay:0.1s]">Olá, eu sou</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground animate-fade-in-up [animation-delay:0.2s]">
             Félix Bastian
@@ -124,17 +127,19 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Indicador de scroll moderno com linha animada e seta */}
-      <div className="flex flex-col items-center justify-center mt-16 z-30 animate-fade-in-up [animation-delay:0.8s]">
-        <div className="relative flex flex-col items-center">
-          {/* Linha animada */}
-          <div className="w-1 h-12 bg-gradient-to-b from-cyan-400/60 to-transparent rounded-full animate-scroll-line mb-1" />
-          {/* Seta bounce */}
-          <svg className="w-7 h-7 text-cyan-400 animate-bounce-slow" fill="none" viewBox="0 0 24 24">
-            <path d="M12 5v14M12 19l7-7M12 19l-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+      {/* Indicador de scroll moderno com linha animada e seta - só na Home */}
+      {isHome && (
+        <div className="pointer-events-none absolute left-1/2 bottom-8 -translate-x-1/2 z-30 animate-fade-in-up [animation-delay:0.8s]">
+          <div className="relative flex flex-col items-center">
+            {/* Linha animada */}
+            <div className="w-1 h-12 bg-gradient-to-b from-cyan-400/60 to-transparent rounded-full animate-scroll-line mb-1" />
+            {/* Seta bounce */}
+            <svg className="w-7 h-7 text-cyan-400 animate-bounce-slow" fill="none" viewBox="0 0 24 24">
+              <path d="M12 5v14M12 19l7-7M12 19l-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Comentários explicativos das melhorias visuais:
         - Grid tecnológico: div absoluta com background-image linear-gradient.
