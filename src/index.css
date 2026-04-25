@@ -42,7 +42,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
   }
 }
 
@@ -229,11 +229,11 @@
 }
 
 .section {
-  @apply py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto;
+  @apply py-20 px-4 md:px-8 lg:px-16 max-w-full overflow-x-hidden mx-auto;
 }
 
 .container-fluid {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply max-w-full overflow-x-hidden mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 /* --- Animações customizadas para HeroSection --- */
