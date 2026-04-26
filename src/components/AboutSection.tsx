@@ -79,6 +79,10 @@ const AboutSection = () => {
               {/* Wrapper fixo para moldura giratória */}
               <div className="relative flex items-center justify-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" style={{ width: '100%', maxWidth: 352, height: 432 }}>
                 {/* Moldura giratória estável */}
+                                  {/* Aplica scale responsivo para evitar corte em telas pequenas */}
+                                  {/* scale-90 em mobile, sm:scale-100 em telas médias+ */}
+                                  className="relative flex items-center justify-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl scale-90 sm:scale-100"
+                                  style={{ width: '100%', maxWidth: 352, height: 432 }}
                 <div
                   className="absolute inset-0 rounded-2xl border-2 border-cyan-700/40 animate-spin-slow"
                   style={{

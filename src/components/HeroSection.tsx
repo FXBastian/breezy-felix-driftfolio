@@ -91,7 +91,7 @@ const HeroSection = () => {
 
         {/* Avatar com ring animado, glow e badges flutuantes */}
         <div className="order-1 lg:order-2 flex justify-center mt-12 w-full max-w-full">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 animate-fade-in-up [animation-delay:0.6s] max-w-full">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 animate-fade-in-up [animation-delay:0.6s] max-w-full scale-90 sm:scale-100">
             {/* Ring animado externo */}
             <div className="absolute -inset-4 md:-inset-6 flex items-center justify-center z-10 pointer-events-none">
               <div className="w-full h-full rounded-full border-2 border-cyan-700/40 animate-spin-slow" style={{boxShadow: '0 0 32px 8px #0ea5e9, 0 0 0 8px #0ea5e91a'}} />
